@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 로고 */
+.logo-wrap {
+  margin-bottom: 32px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* 타이틀 */
+.heading {
+  font-size: 52px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  width: 100%;
+  word-break: keep-all;
+}
+
+/* 폼 */
+.login-form {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  background: #121212;
+  color: #fff;
+  padding: 14px 16px;
+  border: 1px solid #727272;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form-input:focus {
+  border-color: #fff;
+}
+
+.btn-continue {
+  width: 100%;
+  padding: 16px;
+  background: #1ed760;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.btn-continue:hover {
+  background: #1fdf64;
+}
+
+/* 가입하기 */
+.signup-section {
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+.signup-prompt {
+  font-size: 14px;
+  color: #a7a7a7;
+  margin-bottom: 6px;
+}
+
+.signup-link {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.signup-link:hover {
+  color: #1ed760;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up</title>
+  <link rel="stylesheet" href="signup.css" />
+  <script defer src="./signup.js"></script>
+</head>
+<body>
+  <main>
+
+    <!-- 이메일 입력 단계 -->
+    <div id="step-email" class="step">
+      <header class="logo-header">
+        <svg role="img" viewBox="0 0 24 24" class="logo" aria-label="Spotify" fill="white">
+          <title>Spotify</title>
+          <path d="M13.427.01C6.805-.253 1.224 4.902.961 11.524.698 18.147 5.853 23.728 12.476 23.99c6.622.263 12.203-4.892 12.466-11.514S20.049.272 13.427.01m5.066 17.579a.717.717 0 0 1-.977.268 14.4 14.4 0 0 0-5.138-1.747 14.4 14.4 0 0 0-5.42.263.717.717 0 0 1-.338-1.392c1.95-.474 3.955-.571 5.958-.29 2.003.282 3.903.928 5.647 1.92a.717.717 0 0 1 .268.978m1.577-3.15a.93.93 0 0 1-1.262.376 17.7 17.7 0 0 0-5.972-1.96 17.7 17.7 0 0 0-6.281.238.93.93 0 0 1-1.11-.71.93.93 0 0 1 .71-1.11 19.5 19.5 0 0 1 6.94-.262 19.5 19.5 0 0 1 6.599 2.165c.452.245.62.81.376 1.263m1.748-3.551a1.147 1.147 0 0 1-1.546.488 21.4 21.4 0 0 0-6.918-2.208 21.4 21.4 0 0 0-7.259.215 1.146 1.146 0 0 1-.456-2.246 23.7 23.7 0 0 1 8.034-.24 23.7 23.7 0 0 1 7.657 2.445c.561.292.78.984.488 1.546"></path>
+        </svg>
+      </header>
+      <section class="email-section">
+        <div class="headline">
+          <div>가입하고 원하는</div>
+          <div>콘텐츠를</div>
+          <div>감상하세요</div>
+        </div>
+        <form onsubmit="return false;">
+          <label for="email" class="form-label">이메일 주소</label>
+          <input class="form-input" type="email" id="email" placeholder="name@domain.com" />
+          <button class="btn-primary" type="button" id="email-next-btn">다음</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- 1/3단계: 비밀번호 만들기 -->
+    <div id="step-password" class="step hidden">
+      <header class="logo-header">
+        <svg role="img" viewBox="0 0 24 24" class="logo" aria-label="Spotify" fill="white">
+          <title>Spotify</title>
+          <path d="M13.427.01C6.805-.253 1.224 4.902.961 11.524.698 18.147 5.853 23.728 12.476 23.99c6.622.263 12.203-4.892 12.466-11.514S20.049.272 13.427.01m5.066 17.579a.717.717 0 0 1-.977.268 14.4 14.4 0 0 0-5.138-1.747 14.4 14.4 0 0 0-5.42.263.717.717 0 0 1-.338-1.392c1.95-.474 3.955-.571 5.958-.29 2.003.282 3.903.928 5.647 1.92a.717.717 0 0 1 .268.978m1.577-3.15a.93.93 0 0 1-1.262.376 17.7 17.7 0 0 0-5.972-1.96 17.7 17.7 0 0 0-6.281.238.93.93 0 0 1-1.11-.71.93.93 0 0 1 .71-1.11 19.5 19.5 0 0 1 6.94-.262 19.5 19.5 0 0 1 6.599 2.165c.452.245.62.81.376 1.263m1.748-3.551a1.147 1.147 0 0 1-1.546.488 21.4 21.4 0 0 0-6.918-2.208 21.4 21.4 0 0 0-7.259.215 1.146 1.146 0 0 1-.456-2.246 23.7 23.7 0 0 1 8.034-.24 23.7 23.7 0 0 1 7.657 2.445c.561.292.78.984.488 1.546"></path>
+        </svg>
+      </header>
+      <div class="progress-wrap">
+        <div class="progress-fill" style="width:33.33%"></div>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="back-btn" id="back-btn-pw">&#8249;</button>
+        <span class="step-label">1/3단계</span>
+      </div>
+      <h1 class="step-title">비밀번호를 만드세요.</h1>
+      <form onsubmit="return false;" class="pw-form">
+        <label for="password" class="form-label">비밀번호</label>
+        <div class="pw-input-wrap">
+          <input type="password" id="password" class="form-input" />
+          <button type="button" class="eye-btn" id="eye-btn">
+            <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+              <line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </button>
+        </div>
+        <p class="req-desc">비밀번호에는 다음 문자가 반드시 포함되어야 합니다.</p>
+        <ul class="req-list">
+          <li><span class="req-dot"></span>문자 1개</li>
+          <li><span class="req-dot"></span>숫자 또는 특수 문자 1개(예: # ? ! &amp;)</li>
+          <li><span class="req-dot"></span>10자 이상</li>
+        </ul>
+        <button type="button" class="btn-primary" id="pw-next-btn">다음</button>
+      </form>
+      <footer class="recaptcha-footer">
+        This site is protected by reCAPTCHA and the Google
+        <a href="#" class="recaptcha-link">Privacy Policy</a> and
+        <a href="#" class="recaptcha-link">Terms of Service</a> apply.
+      </footer>
+    </div>
+
+    <!-- 2/3단계: 자신을 소개해주세요 -->
+    <div id="step-profile" class="step hidden">
+      <header class="logo-header">
+        <svg role="img" viewBox="0 0 24 24" class="logo" aria-label="Spotify" fill="white">
+          <title>Spotify</title>
+          <path d="M13.427.01C6.805-.253 1.224 4.902.961 11.524.698 18.147 5.853 23.728 12.476 23.99c6.622.263 12.203-4.892 12.466-11.514S20.049.272 13.427.01m5.066 17.579a.717.717 0 0 1-.977.268 14.4 14.4 0 0 0-5.138-1.747 14.4 14.4 0 0 0-5.42.263.717.717 0 0 1-.338-1.392c1.95-.474 3.955-.571 5.958-.29 2.003.282 3.903.928 5.647 1.92a.717.717 0 0 1 .268.978m1.577-3.15a.93.93 0 0 1-1.262.376 17.7 17.7 0 0 0-5.972-1.96 17.7 17.7 0 0 0-6.281.238.93.93 0 0 1-1.11-.71.93.93 0 0 1 .71-1.11 19.5 19.5 0 0 1 6.94-.262 19.5 19.5 0 0 1 6.599 2.165c.452.245.62.81.376 1.263m1.748-3.551a1.147 1.147 0 0 1-1.546.488 21.4 21.4 0 0 0-6.918-2.208 21.4 21.4 0 0 0-7.259.215 1.146 1.146 0 0 1-.456-2.246 23.7 23.7 0 0 1 8.034-.24 23.7 23.7 0 0 1 7.657 2.445c.561.292.78.984.488 1.546"></path>
+        </svg>
+      </header>
+      <div class="progress-wrap">
+        <div class="progress-fill" style="width:66.66%"></div>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="back-btn" id="back-btn-profile">&#8249;</button>
+        <span class="step-label">2/3단계</span>
+      </div>
+      <h1 class="step-title">자신을 소개해주세요</h1>
+      <form onsubmit="return false;" class="profile-form">
+
+        <!-- 이름 -->
+        <div class="form-section">
+          <label for="name" class="section-title">이름</label>
+          <p class="section-desc">이 이름이 프로필에 표시됩니다.</p>
+          <input type="text" id="name" class="form-input" />
+        </div>
+
+        <!-- 생년월일 -->
+        <div class="form-section">
+          <p class="section-title">생년월일</p>
+          <p class="section-desc">생년월일 정보가 필요한 이유에 대해 <a href="#" class="inline-link">자세히 알아보세요</a>.</p>
+          <div class="birthday-row">
+            <input type="text" placeholder="yyyy" class="form-input birthday-year" maxlength="4" />
+            <select class="form-input birthday-month">
+              <option value="" disabled selected>월</option>
+              <option value="1">1월</option>
+              <option value="2">2월</option>
+              <option value="3">3월</option>
+              <option value="4">4월</option>
+              <option value="5">5월</option>
+              <option value="6">6월</option>
+              <option value="7">7월</option>
+              <option value="8">8월</option>
+              <option value="9">9월</option>
+              <option value="10">10월</option>
+              <option value="11">11월</option>
+              <option value="12">12월</option>
+            </select>
+            <input type="text" placeholder="dd" class="form-input birthday-day" maxlength="2" />
+          </div>
+        </div>
+
+        <!-- 성별 -->
+        <div class="form-section">
+          <p class="section-title">성별</p>
+          <p class="section-desc">성별 정보는 회원님을 위한 맞춤형 콘텐츠 추천과 광고를 위해 사용됩니다.</p>
+          <div class="gender-options">
+            <label class="gender-option"><input type="radio" name="gender" value="male" /><span>남성</span></label>
+            <label class="gender-option"><input type="radio" name="gender" value="female" /><span>여성</span></label>
+            <label class="gender-option"><input type="radio" name="gender" value="nonbinary" /><span>논바이너리</span></label>
+            <label class="gender-option"><input type="radio" name="gender" value="other" /><span>기타</span></label>
+            <label class="gender-option"><input type="radio" name="gender" value="prefer_not" /><span>답변 거부</span></label>
+          </div>
+        </div>
+
+        <button type="button" class="btn-primary" id="profile-next-btn">다음</button>
+      </form>
+      <footer class="recaptcha-footer">
+        This site is protected by reCAPTCHA and the Google
+        <a href="#" class="recaptcha-link">Privacy Policy</a> and
+        <a href="#" class="recaptcha-link">Terms of Service</a> apply.
+      </footer>
+    </div>
+
+    <!-- 3/3단계: 약관 동의 -->
+    <div id="step-terms" class="step hidden">
+      <header class="logo-header">
+        <svg role="img" viewBox="0 0 24 24" class="logo" aria-label="Spotify" fill="white">
+          <title>Spotify</title>
+          <path d="M13.427.01C6.805-.253 1.224 4.902.961 11.524.698 18.147 5.853 23.728 12.476 23.99c6.622.263 12.203-4.892 12.466-11.514S20.049.272 13.427.01m5.066 17.579a.717.717 0 0 1-.977.268 14.4 14.4 0 0 0-5.138-1.747 14.4 14.4 0 0 0-5.42.263.717.717 0 0 1-.338-1.392c1.95-.474 3.955-.571 5.958-.29 2.003.282 3.903.928 5.647 1.92a.717.717 0 0 1 .268.978m1.577-3.15a.93.93 0 0 1-1.262.376 17.7 17.7 0 0 0-5.972-1.96 17.7 17.7 0 0 0-6.281.238.93.93 0 0 1-1.11-.71.93.93 0 0 1 .71-1.11 19.5 19.5 0 0 1 6.94-.262 19.5 19.5 0 0 1 6.599 2.165c.452.245.62.81.376 1.263m1.748-3.551a1.147 1.147 0 0 1-1.546.488 21.4 21.4 0 0 0-6.918-2.208 21.4 21.4 0 0 0-7.259.215 1.146 1.146 0 0 1-.456-2.246 23.7 23.7 0 0 1 8.034-.24 23.7 23.7 0 0 1 7.657 2.445c.561.292.78.984.488 1.546"></path>
+        </svg>
+      </header>
+      <div class="progress-wrap">
+        <div class="progress-fill" style="width:100%"></div>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="back-btn" id="back-btn-terms">&#8249;</button>
+        <span class="step-label">3/3단계</span>
+      </div>
+      <h1 class="step-title">약관에 동의하세요.</h1>
+      <form onsubmit="return false;" class="terms-form">
+        <p class="terms-intro">
+          Spotify 이용을 계속하면 아래의 약관에 동의하는 것으로 간주됩니다.
+        </p>
+
+        <label class="terms-item">
+          <input type="checkbox" class="terms-checkbox" id="terms-marketing" />
+          <span class="terms-text">
+            마케팅 목적으로 Spotify의 이메일을 받고 싶습니다. 언제든지 수신 거부할 수 있습니다.
+          </span>
+        </label>
+
+        <label class="terms-item">
+          <input type="checkbox" class="terms-checkbox" id="terms-data" />
+          <span class="terms-text">
+            맞춤형 광고를 제공하기 위해 Spotify가 내 등록 데이터를 파트너와 공유하는 것에 동의합니다.
+            <a href="#" class="inline-link">자세히 알아보기</a>
+          </span>
+        </label>
+
+        <p class="terms-notice">
+          Spotify 이용 약관에 대한 자세한 내용은 <a href="#" class="inline-link">이용 약관</a> 및
+          <a href="#" class="inline-link">개인정보 처리 방침</a>을 참고하세요.
+        </p>
+
+        <button type="button" class="btn-primary btn-signup">회원가입</button>
+      </form>
+      <footer class="recaptcha-footer">
+        This site is protected by reCAPTCHA and the Google
+        <a href="#" class="recaptcha-link">Privacy Policy</a> and
+        <a href="#" class="recaptcha-link">Terms of Service</a> apply.
+      </footer>
+    </div>
+
+  </main>
+</body>
+</html>

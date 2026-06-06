@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <nav>
+        <h1><a href="#"><img src="/assets/images/logo.png" alt="스포티파이 로고" /></a></h1>
+        <ul>
+          <li class="nav-hide"><a href="#none">Premium</a></li>
+          <li class="nav-hide"><a href="#none">Support</a></li>
+          <li class="nav-hide"><a href="#none">Download</a></li>
+          <span class="divider"></span>
+          <li><a href="/signup/signup.html">Sign up</a></li>
+          <li><a href="/login/login.html">Login</a></li>
+        </ul>
+        <button class="hamburger" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+      <div class="mobile-menu">
+        <a href="#none">Premium</a>
+        <a href="#none">Support</a>
+        <a href="#none">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+      <div class="headline">
+        <div class="headline-first">Listening is</div>
+        <div class="headline-second">everything</div>
+      </div>
+      <div class="sub-headline">
+          Millions of songs and podcasts. No credit card needed.
+      </div>
+      <button class="btn">Get Spotify free</button>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <div class="first-line">
+        <div class="first-box">
+          <img class="logo" src="/assets/images/logo.png" alt="스포티파이 로고" />
+          <ul class="gnb">
+            <li>
+              COMPANY
+              <ul class="sub-gnb">
+                <li><a href="#none">About</a></li>
+                <li><a href="#none">Jobs</a></li>
+                <li><a href="#none">For the Recode</a></li>
+              </ul>
+            </li>
+            <li>COMMUNITIES
+              <ul class="sub-gnb">
+                <li><a href="#none">For Artists</a></li>
+                <li><a href="#none">Developers</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#none">Investors</a></li>
+                <li><a href="#">Vendors</a></li>
+              </ul>
+            </li>
+            <li class="useful">USEFUL LINKS
+              <ul class="sub-gnb">
+                <li><a href="#none">Support</a></li>
+                <li><a href="#none">Web Player</a></li>
+                <li><a href="#none">Free Mobile</a> App</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="second-box">
+          <ul class="sns">
+            <li><a href="#none"><i class="fa-brands fa-instagram icon"></i></a></li>
+            <li><a href="#none"><i class="fa-brands fa-x-twitter icon"></i></a></li>
+            <li><a href="#none"><i class="fa-brands fa-meta icon"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="second-line">
+        <ul class="flex">
+          <li><a href="#none">Legal</a></li>
+          <li><a href="#none">Privacy Center</a></li>
+          <li><a href="#none">Privacy Policy</a></li>
+          <li><a href="#none">Cookies</a></li>
+          <li><a href="#none">About Ads</a></li>
+          <li><a href="#none">Additional CA Privacy Disclosures</a></li>
+        </ul>
+        <div class="third-box">
+          <div class="item"><i class="fas fa-globe-africa"></i>
+                USA</div>
+          &copy; 2026 Spotify AB
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
